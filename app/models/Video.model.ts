@@ -12,7 +12,11 @@ export interface IVideo {
     videoUrl: string;
     thumbnailUrl: string;
     controls?: boolean;
-    transformation?: boolean;
+    transformation?: {
+    height: number;
+    width: number;
+    quality?: number;
+  };
 };
 
 const videoShema = new mongoose.Schema<IVideo>({
